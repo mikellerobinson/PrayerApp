@@ -1,0 +1,32 @@
+<%= form_for(prayer_request) do |f| %>
+  <% if prayer_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(prayer_request.errors.count, "error") %> prohibited this prayer_request from being saved:</h2>
+
+      <ul>
+      <% prayer_request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :signature %>
+    <%= f.text_field :signature %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="page-header">Prayer Requests</h1>
+<ul class="prayer-requests-list">
+  <% @prayer_requests.each do |prayer_request| %>
+    <div class="row-b tiledContent">
+      <div class="col span-desk-36" id="wailing-prayer-253623">
+        <div class="tile tile-featuredPrayer">
+        <p><span class="tile_prayerHeadingIcon"></span><%= prayer_request.message %></p>
+        <p class="tile_prayerDetails">Posted by <%= prayer_request.signature || 'Anonymous' %> at <%= prayer_request.created_at.in_time_zone('Central Time (US & Canada)').strftime('%m/%d/%y %I:%m%P') %>   </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</ul>
+
+<%= link_to 'Make A Prayer Request', new_prayer_request_path, class: 'new-prayer-request-link' %>

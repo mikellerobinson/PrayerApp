@@ -1,0 +1,40 @@
+.tiledContent {
+	background-color: white;
+	color: #555859;
+	border-bottom: 1px solid silver;
+	padding: 10px;
+}
+
+h1.page-header {
+	background: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+ul.prayer-requests-list {
+	padding: 0;
+}
+
+.new-prayer-request-link {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tile_prayerDetails {
+	font-size: 10px;
+}
+
+#error_explanation {
+	color: #555859;
+}
+#error_explanation h2 {
+	color: #555859 !important;
+}
