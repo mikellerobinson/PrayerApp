@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20160912045007) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "prayer_requests", force: :cascade do |t|
     t.string   "signature"
     t.string   "location"
